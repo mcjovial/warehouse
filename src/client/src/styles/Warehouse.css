@@ -1,0 +1,29 @@
+.splide__arrow {
+  background-color: #ff5722 !important;
+  width: 2.5rem !important;
+  height: 2.5rem !important;
+  opacity: 0.9 !important;
+}
+
+.splide__arrow svg {
+  fill: white !important;
+}
+
+.splide__pagination__page {
+  background-color: #ffffff !important;
+}
+
+.warehouse-img-wrapper {
+  overflow: hidden;
+}
+
+.warehouse-img-wrapper img {
+  height: 100%;
+  width: 100%;
+  transition: 0.5s;
+}
+
+.warehouse-img-wrapper:hover img {
+  transform: scale(1.2);
+}
+
