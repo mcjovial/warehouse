@@ -4,7 +4,7 @@ require('dotenv').config()
 //process.ev
 
 cloudinary.v2.config({
-  cloud_name: 'makhzan',
+  cloud_name: 'mcjovial',
   api_key: process.env.API_CLOUD_KEY,
   api_secret: process.env.API_SECRET_KEY,
 })

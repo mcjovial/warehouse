@@ -1,0 +1,2 @@
+### Get all warehouses
+GET http://localhost:6000/api/warehouses/ HTTP/1.1

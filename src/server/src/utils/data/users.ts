@@ -9,7 +9,7 @@ const UserMockData = [
   },
   {
     id: 'cc5f307d-654d-4d60-91eb-5da96990fa29',
-    name: 'Mohamed User',
+    name: 'Mcjovial User',
     email: 'admin2@example.com',
     password: 'f3423423fd3s',
     phoneNumber: '412354347',

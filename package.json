@@ -10,6 +10,6 @@
     "server": "cd src && cd server && npm run dev",
     "server-build": "cd src && cd server && npm run build"
   },
-  "author": "Mohamed Salem",
+  "author": "McJovial",
   "license": "MIT"
 }

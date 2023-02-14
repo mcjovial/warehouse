@@ -2,10 +2,10 @@ const Warehouses = [
   {
     title: 'Warehouse 1500 SQM licensed Food & Beverage',
     description:
-      'Warehouse for Rent in New Cairo Alf Masnaa Area.Space Area: 1500 SQM.Hangar Height 10.5 M Rent Rate: EGP250,000 Monthly.Newly Renovated Fully finished',
+      'Warehouse for Rent in New Nyanya Alf Masnaa Area.Space Area: 1500 SQM.Hangar Height 10.5 M Rent Rate: EGP250,000 Monthly.Newly Renovated Fully finished',
     size: 1500, // sqm
     rent: 150000,
-    governorate: 'Cairo',
+    governorate: 'Abuja',
     location: '6 October City',
     street: '112',
     services: ['Power', 'RFID', 'Networked', 'Thermostat', 'Alarm', 'Bathroom'],
@@ -19,11 +19,11 @@ const Warehouses = [
 
   {
     title: 'Amazing warehouse with 5 floors',
-    description: 'Warehouse for Rent in New Cairod',
+    description: 'Warehouse for Rent in New Layout Enugu',
     size: 2000,
     rent: 200000,
-    governorate: 'Giza',
-    location: 'Dokki',
+    governorate: 'Enugu',
+    location: 'Enugu',
     street: '105 street',
     services: ['thermostat', 'forklift', 'alarm'],
     images: [
@@ -39,9 +39,9 @@ const Warehouses = [
     description: 'warehouse awesome awesome awesome',
     size: 999,
     rent: 6150,
-    governorate: 'Alexandria',
-    location: 'Bawlino',
-    street: 'mohrem beeh',
+    governorate: 'Kaduna',
+    location: 'Barnawa',
+    street: 'Camp david ',
     services: ['Power', 'RFID', 'Alarm', 'Bathroom'],
 
     images: [

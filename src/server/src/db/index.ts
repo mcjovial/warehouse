@@ -1,5 +1,6 @@
 import sequelize from '../config/pgsql'
 import redis_client from '../config/redis'
+  
 ;(async (): Promise<void> => {
   try {
     await sequelize.authenticate()
