@@ -58,7 +58,7 @@ describe("testing random routes", () => {
 
   describe("Warehouse Routes", () => {
     test("Should get all warehouses", async () => {
-      const response = await supertest(app).get("/warehouses").expect(200);
+      const response = await supertest(app).get("/api/warehouses").expect(200);
 
       expect(response.body.warehouses).toHaveLength(1);
       expect(response.body.warehouses[0]).toHaveProperty("id", WarehouseOneID);
@@ -68,7 +68,7 @@ describe("testing random routes", () => {
       const token = await generateJWTAuthToken(userOne);
 
       const response = await supertest(app)
-        .post("/warehouses/create")
+        .post("/api/warehouses/create")
         .set("Authorization", `Bearer ${token}`)
         .send(warehouseTwo)
         .expect(201);
@@ -80,7 +80,7 @@ describe("testing random routes", () => {
 
     test("Should filter warehouses based on body attributes", async () => {
       const response = await supertest(app)
-        .post("/warehouses")
+        .post("/api/warehouses")
         .send({
           rent: [0, 0],
           size: [0, 0],
@@ -94,7 +94,7 @@ describe("testing random routes", () => {
 
     test("Should get warehouse with this associated id", async () => {
       const response = await supertest(app)
-        .get(`/warehouses/${WarehouseOneID}`)
+        .get(`/api/warehouses/${WarehouseOneID}`)
         .expect(200);
 
       expect(response.body.warehouse).not.toBeNull();
@@ -105,7 +105,7 @@ describe("testing random routes", () => {
       const token = await generateJWTAuthToken(userOne);
 
       const response = await supertest(app)
-        .delete(`/warehouses/${WarehouseOneID}`)
+        .delete(`/api/warehouses/${WarehouseOneID}`)
         .set("Authorization", `Bearer ${token}`)
         .expect(200);
 
@@ -116,7 +116,7 @@ describe("testing random routes", () => {
 
     test("Should not delete warehouse for unauthneticated user", async () => {
       const response = await supertest(app)
-        .delete(`/warehouses/${WarehouseOneID}`)
+        .delete(`/api/warehouses/${WarehouseOneID}`)
         .expect(401);
 
       expect(response.body).toMatchObject({
@@ -128,7 +128,7 @@ describe("testing random routes", () => {
       const token = await generateJWTAuthToken(userTwo);
 
       const response = await supertest(app)
-        .delete(`/warehouses/${WarehouseOneID}`)
+        .delete(`/api/warehouses/${WarehouseOneID}`)
         .set("Authorization", `Bearer ${token}`)
         .expect(403);
 
@@ -141,7 +141,7 @@ describe("testing random routes", () => {
   describe("User Routes", () => {
     test("Should signup a new user", async () => {
       const response = await supertest(app)
-        .post("/users/register")
+        .post("/api/users/register")
         .send(userThree)
         .expect(201);
 
@@ -151,7 +151,7 @@ describe("testing random routes", () => {
 
     test("Should login existing user", async () => {
       const response = await supertest(app)
-        .post("/users/login")
+        .post("/api/users/login")
         .send({
           email: userThree.email,
           password: userThree.password,
@@ -169,7 +169,7 @@ describe("testing random routes", () => {
 
     test("Should not login nonexistent user", async () => {
       await supertest(app)
-        .post("/users/login")
+        .post("/api/users/login")
         .send({
           email: userThree.email,
           password: "thisisnotmypass",
@@ -181,7 +181,7 @@ describe("testing random routes", () => {
       const token = await generateJWTAuthToken(userThree);
 
       const response = await supertest(app)
-        .post("/users/logout")
+        .post("/api/users/logout")
         .set("Authorization", `Bearer ${token}`)
         .send()
         .expect(200);
@@ -193,7 +193,7 @@ describe("testing random routes", () => {
       const token = await generateJWTAuthToken(userOne);
 
       const response = await supertest(app)
-        .delete(`/users/delete/${UserThreeID}`)
+        .delete(`/api/users/delete/${UserThreeID}`)
         .set("Authorization", `Bearer ${token}`)
         .send()
         .expect(200);
@@ -210,7 +210,7 @@ describe("testing random routes", () => {
       const token = await generateJWTAuthToken(userOne);
 
       const response = await supertest(app)
-        .get(`/users`)
+        .get(`/api/users`)
         .set("Authorization", `Bearer ${token}`)
         .send()
         .expect(200);
@@ -222,7 +222,7 @@ describe("testing random routes", () => {
       const token = await generateJWTAuthToken(userTwo);
 
       const response = await supertest(app)
-        .get(`/users`)
+        .get(`/api/users`)
         .set("Authorization", `Bearer ${token}`)
         .send()
         .expect(403);
