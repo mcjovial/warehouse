@@ -8,7 +8,7 @@ describe('WarehousesList Reduxified Container', () => {
     render(<ExplorePage />)
 
     expect(await screen.findByTestId('warehouses-nodes')).toBeTruthy()
-    expect(await screen.findByText(/Cairo/i)).toBeInTheDocument()
+    expect(await screen.findByText(/Abuja/i)).toBeInTheDocument()
     expect(await screen.findByText(/Giza/i)).toBeInTheDocument()
 
     expect(await screen.queryByText(/Failed to fetch warehouses/i)).not.toBeInTheDocument()
@@ -25,7 +25,7 @@ describe('WarehousesList Reduxified Container', () => {
 
     const searchResult = result.container.querySelector('#governorates-filter-option-5')
 
-    fireEvent.change(governoratesInput, { target: { value: 'Cairo' } })
+    fireEvent.change(governoratesInput, { target: { value: 'Abuja' } })
 
     if (searchResult) {
       fireEvent.keyPress(searchResult, {
@@ -36,7 +36,7 @@ describe('WarehousesList Reduxified Container', () => {
       })
     }
     const applyFiltersButton = await screen.findByText(/Apply Filters/i)
-    expect(await screen.findAllByText(/Cairo/i)).toHaveLength(2)
+    expect(await screen.findAllByText(/Abuja/i)).toHaveLength(2)
     fireEvent.click(applyFiltersButton)
     expect(await screen.findAllByTestId('warehouse-node')).toHaveLength(2)
   })

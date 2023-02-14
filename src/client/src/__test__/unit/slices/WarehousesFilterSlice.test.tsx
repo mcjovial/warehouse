@@ -4,7 +4,7 @@ import { WarehousesFilterState } from '../../../slices/WarehousesFilterSlice'
 
 describe('Filter Slice Reduxified', () => {
   const filters = {
-    governorates: ['cairo'],
+    governorates: ['abuja'],
     locations: ['maadi'],
     rent: [0, 100],
     size: [200, 300],

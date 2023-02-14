@@ -12,11 +12,11 @@ describe('Filter Component', () => {
         addFilters={addFilters}
         clearFilters={clearFilters}
         locations={['Maadi']}
-        governorates={['Cairo']}
+        governorates={['Abuja']}
       />
     )
 
-    expect(await screen.findByText(/cairo/i)).toBeInTheDocument()
+    expect(await screen.findByText(/abuja/i)).toBeInTheDocument()
     expect(await screen.findByText(/maadi/i)).toBeInTheDocument()
   })
 
@@ -26,7 +26,7 @@ describe('Filter Component', () => {
         addFilters={addFilters}
         clearFilters={clearFilters}
         locations={['Maadi']}
-        governorates={['Cairo']}
+        governorates={['Abuja']}
       />
     )
     const minSizeInput = await screen.findByTestId('min-size-input')
@@ -48,7 +48,7 @@ describe('Filter Component', () => {
         addFilters={addFilters}
         clearFilters={clearFilters}
         locations={['Maadi']}
-        governorates={['Cairo']}
+        governorates={['Abuja']}
       />
     )
 
@@ -63,7 +63,7 @@ describe('Filter Component', () => {
     fireEvent.click(applyFiltersButton)
     fireEvent.click(clearFiltersButton)
 
-    expect(await screen.queryByText(/cairo/i)).not.toBeInTheDocument()
+    expect(await screen.queryByText(/abuja/i)).not.toBeInTheDocument()
     expect(await screen.queryByText(/maadi/i)).not.toBeInTheDocument()
     expect(minSizeInput).toHaveValue(0)
     expect(maxSizeInput).toHaveValue(0)

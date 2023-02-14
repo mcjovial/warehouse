@@ -9,7 +9,7 @@ describe('Warehouse Component', () => {
   test('warehouse componenet renders props', async () => {
     render(<Warehouse {...warehouses[0]} />)
 
-    expect(await screen.findByText(/Cairo/i)).toBeInTheDocument()
+    expect(await screen.findByText(/Abuja/i)).toBeInTheDocument()
     expect(await screen.findAllByText(/1500 sqm/i)).toHaveLength(2)
     expect(size).toEqual(1500)
   })

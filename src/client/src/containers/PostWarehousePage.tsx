@@ -35,7 +35,7 @@ const initialState = {
     description: 'more info about the warehouse',
     size: 1000,
     rent: 100,
-    governorate: 'Cairo',
+    governorate: 'Abuja',
     location: '6 October City',
     street: '112',
     services: [],
@@ -203,7 +203,7 @@ const PostWarehouse: React.FC = () => {
                       error={!!errors.rent}
                       helperText={!!errors.rent && 'Incorrect entry.'}
                       InputProps={{
-                        startAdornment: <InputAdornment position="start">E£</InputAdornment>,
+                        startAdornment: <InputAdornment position="start">₦</InputAdornment>,
                       }}
                     />
                   </Tooltip>

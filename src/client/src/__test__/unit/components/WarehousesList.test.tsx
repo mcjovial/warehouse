@@ -7,14 +7,14 @@ describe('WarehousesList Component', () => {
     render(<WarehousesList warehouses={warehouses} loading={false} error="" />)
 
     expect(await screen.findByTestId('warehouses-nodes')).toBeTruthy()
-    expect(await screen.findByText(/Cairo/i)).toBeInTheDocument()
+    expect(await screen.findByText(/Abuja/i)).toBeInTheDocument()
   })
 
   test('should render No warehouses to Display', async () => {
     render(<WarehousesList warehouses={[]} loading={false} error="" />)
 
     expect(await screen.findByText('No warehouses to Display')).toBeInTheDocument()
-    expect(await screen.queryByText(/Cairo/i)).not.toBeInTheDocument()
+    expect(await screen.queryByText(/Abuja/i)).not.toBeInTheDocument()
   })
 
   test('should render skeleton warehouses while loading', async () => {

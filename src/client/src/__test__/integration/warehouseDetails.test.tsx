@@ -16,7 +16,7 @@ describe('WarehouseDetails Reduxified Container', () => {
       { route: '/explore/123' }
     )
 
-    expect(await screen.findByText(/Warehouse for rent in Cairo/i)).toBeInTheDocument()
+    expect(await screen.findByText(/Warehouse for rent in Abuja/i)).toBeInTheDocument()
     expect(await screen.findByText(/Warehouse Size: 1500 sqm/i)).toBeInTheDocument()
 
     expect(await screen.findByText(/Admin User/i)).toBeInTheDocument()

@@ -8,7 +8,7 @@ describe('PostWarehouse Reduxified Container', () => {
     const submitButt = screen.getByRole('button', { name: /create warehouse/i })
 
     expect(screen.queryByText(/Loading/i)).not.toBeInTheDocument()
-    expect(await screen.findByDisplayValue(/Cairo/i)).toBeInTheDocument()
+    expect(await screen.findByDisplayValue(/Abuja/i)).toBeInTheDocument()
 
     await waitFor(() => {
       fireEvent.submit(submitButt)

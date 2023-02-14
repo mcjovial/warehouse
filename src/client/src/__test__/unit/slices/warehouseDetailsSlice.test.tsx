@@ -10,7 +10,7 @@ describe('WarehousesDetails Slice Reduxified', () => {
       description: 'its new!',
       size: 100,
       rent: 10000,
-      governorate: 'Cairo',
+      governorate: 'Abuja',
       location: 'Maadi',
       street: '55',
       services: ['Alarm'],

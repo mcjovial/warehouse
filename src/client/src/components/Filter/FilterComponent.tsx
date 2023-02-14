@@ -168,7 +168,7 @@ const FilterComponent: React.FC<IFilterWarehousesState> = ({
                 onChange={handleChangeRent}
                 value={rent.minRent}
                 InputProps={{
-                  startAdornment: <InputAdornment position="start">E£</InputAdornment>,
+                  startAdornment: <InputAdornment position="start">₦</InputAdornment>,
                 }}
               />
               <TextField
@@ -178,7 +178,7 @@ const FilterComponent: React.FC<IFilterWarehousesState> = ({
                 onChange={handleChangeRent}
                 value={rent.maxRent}
                 InputProps={{
-                  startAdornment: <InputAdornment position="start">E£</InputAdornment>,
+                  startAdornment: <InputAdornment position="start">₦</InputAdornment>,
                 }}
               />
             </Stack>

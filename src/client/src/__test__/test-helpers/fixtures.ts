@@ -7,11 +7,10 @@ export const warehouses = [
     {
         id: '202a085b-4c55-4d7e-9cc1-f2169730256d',
         title: 'Warehouse 1500 SQM licensed Food & Beverage',
-        description:
-            'Warehouse for Rent in New Cairo Alf Masnaa Area.Space Area: 1500 SQM.Hangar Height 10.5 M Rent Rate: EGP250,000 Monthly.Newly Renovated Fully finished',
+        description: 'Warehouse for Rent in New Nyanya Alf Masnaa Area.Space Area: 1500 SQM.Hangar Height 10.5 M Rent Rate: EGP250,000 Monthly.Newly Renovated Fully finished',
         size: 1500,
         rent: 150000,
-        governorate: 'Cairo',
+        governorate: 'Abuja',
         location: '6 October City',
         street: '112',
         services: ['Power', 'RFID', 'Networked', 'Thermostat', 'Alarm', 'Bathroom'],
@@ -23,11 +22,11 @@ export const warehouses = [
     {
         id: '4c1ada9d-f622-4188-a042-18984dd2bfe0',
         title: 'Amazing warehouse with 5 floors',
-        description: 'Warehouse for Rent in New Cairod',
+        description: 'Warehouse for Rent in New Layout Enugu',
         size: 2000,
         rent: 200000,
-        governorate: 'Giza',
-        location: 'Dokki',
+        governorate: 'Enugu',
+        location: 'Enugu',
         street: '105 street',
         services: ['thermostat', 'forklift', 'alarm'],
         images: ['https://res.cloudinary.com/makhzan/image/upload/v1643349711/cld-sample.jpg'],
